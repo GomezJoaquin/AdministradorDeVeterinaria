@@ -1,6 +1,6 @@
 import Citas from './Clases/Citas.js'
 import UI from './Clases/UI.js'
-import { mascotaInput, propietarioInput, telefonoInput, fechaInput, horaInput, sintomasInput, formulario } from './selectores.js';
+import { mascotaInput, propietarioInput, telefonoInput, fechaInput, horaInput, sintomasInput, formulario } from './Selectores.js';
 
 
 const ui = new UI();
@@ -82,7 +82,8 @@ export function reiniciarObjeto() {
 export function eliminarCita(id) {
     administrarCitas.eliminarCita(id);
 
-    ui.imprimirCitas(administrarCitas)
+    ui.imprimirAlerta('Se eliminó correctamente','error');
+    ui.imprimirCitas(administrarCitas);
 }
 
 export function cargarEdicion(cita) {
