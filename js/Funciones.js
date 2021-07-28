@@ -58,7 +58,7 @@ export function nuevaCita(e) {
 
 
     // Imprimir el HTML de citas
-    ui.imprimirCitas(administrarCitas);
+    ui.imprimirCitas(DB);
 
     // Reinicia el objeto para evitar futuros problemas de validación
     reiniciarObjeto();
@@ -83,7 +83,7 @@ export function eliminarCita(id) {
     administrarCitas.eliminarCita(id);
 
     ui.imprimirAlerta('Se eliminó correctamente','error');
-    ui.imprimirCitas(administrarCitas);
+    ui.imprimirCitas(DB);
 }
 
 export function cargarEdicion(cita) {
