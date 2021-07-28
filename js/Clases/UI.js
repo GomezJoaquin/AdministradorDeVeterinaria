@@ -28,7 +28,7 @@ class UI {
         }, 3000);
     }
 
-    imprimirCitas(BD) {
+    imprimirCitas(DB) {
 
         this.limpiarHTML();
 

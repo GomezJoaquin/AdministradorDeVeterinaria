@@ -1,4 +1,4 @@
-let BD;
+let DB;
 
 import Citas from './Clases/Citas.js'
 import UI from './Clases/UI.js'
@@ -120,7 +120,7 @@ export function cargarEdicion(cita) {
 }
 
 // Código de IndexedDB
-function crearDB() {
+export function crearDB() {
     // crear base de datos con la versión 1
     const crearDB = window.indexedDB.open('citas', 1);
 
@@ -137,7 +137,7 @@ function crearDB() {
         DB = crearDB.result;
 
         // mostrar citas al cargar
-        ui.imprimirCitas();
+        ui.imprimirCitas(DB);
     }
 
     // este método solo corre una vez
