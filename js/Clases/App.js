@@ -1,5 +1,5 @@
 
-import { datosCita, nuevaCita } from '../Funciones.js';
+import { datosCita, nuevaCita, crearDB } from '../Funciones.js';
 import { mascotaInput, propietarioInput, telefonoInput, fechaInput, horaInput, sintomasInput, formulario } from '../Selectores.js';
 
 class App {
@@ -10,6 +10,9 @@ class App {
     initApp() {
         // Eventos
         eventListeners();
+        
+        //Crear Base de Datos.
+        crearDB();
         function eventListeners() {
             mascotaInput.addEventListener('change', datosCita);
             propietarioInput.addEventListener('change', datosCita);
